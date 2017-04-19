@@ -39,6 +39,8 @@ function getRedirectURL()
 
 	if ( deviceType == "iOS" ) {
 		return "com.rsa.securid://ctkip?url=https://tokenqa.comerica.com/ctkip/services/CtkipService&activationCode="+activationCode;
+	}else if ( deviceType == "Windows" ) {
+		return "com.rsa.securid://ctkip?url=https://tokenqa.comerica.com/ctkip/services/CtkipService&activationCode="+activationCode;
 	}else if ( deviceType == "tmMobile" ) {
 		var cbcId = getQueryValue("cbcId");
 		return "com.comerica.tmcmobile://?action=importToken&activationCode="+activationCode+"&cbcId="+cbcId;
